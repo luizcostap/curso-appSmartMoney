@@ -1,15 +1,22 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, Button, StyleSheet} from 'react-native';
 
-import BalancePanelLabel from './BalancePaneLabel';
+import BalancePanelLabel from './BalancePanelLabel';
 import BalancePanelChart from './BalancePanelChart';
-const BalancePanel = () => {
+
+const BalancePanel = ({currentBalance}) => {
   return (
-    <View>
-      <BalancePanelLabel />
+    <View style={styles.container}>
+      <BalancePanelLabel currentBalance={currentBalance} />
       <BalancePanelChart />
     </View>
   );
 };
-const styles = StyleSheet.create({});
+
+const styles = StyleSheet.create({
+  container: {
+    // flex: 1,
+  },
+});
+
 export default BalancePanel;
