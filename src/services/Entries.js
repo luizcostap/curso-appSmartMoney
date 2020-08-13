@@ -23,12 +23,12 @@ export const saveEntry = async (value, entry) => {
         amount: value.amount || entry.amount,
         entryAt: value.entryAt || entry.entryAt,
         isInit: false,
+        category: value.category || entry.category,
       };
 
       realm.create('Entry', data, true);
     });
-
-    console.log('saveEntry :: data: ', JSON.stringify(data));
+    // console.log('saveEntry :: data: ', JSON.stringify(data));
   } catch (error) {
     console.error('saveEntry :: error on save object: ', JSON.stringify(data));
     Alert.alert('Erro ao salvar os dados de lançamento.');

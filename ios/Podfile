@@ -79,6 +79,8 @@ target 'appSmartMoney' do
 
   pod 'RealmJS', :path => '../node_modules/realm'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'appSmartMoneyTests' do
     inherit! :complete
     # Pods for testing
